@@ -9,16 +9,20 @@
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Vanshika Thakur</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="journey.html">Journey</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+ <nav>
+  <div class="logo">Vanshika</div>
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
   </header>
 
   <section class="hero glass">
@@ -90,5 +94,16 @@
 
 
   <script src="main.js"></script>
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    toggle.querySelector('i').classList.toggle('fa-times');
+    toggle.querySelector('i').classList.toggle('fa-bars');
+  });
+</script>
+
 </body>
 </html>
