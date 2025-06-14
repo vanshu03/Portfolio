@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Vanshika</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papLFNQ2W+lIUtP1Rh/x4yBt5+pY6A1KZ8tEx8BWT1lAwVR89r5z6XhDhBkzZNmq9RXDLzW2bD3RTeJWXrr4Zg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .projects-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .projects-section h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .filters {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .filters button {
+      background: #03dac6;
+      border: none;
+      color: #000;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .filters button i {
+      margin-right: 6px;
+    }
+    .filters button:hover,
+    .filters button.active {
+      background: #01c5b2;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      cursor: pointer;
+    }
+    .project-card:hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    background: rgba(220, 220, 220, 0.436);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: #03dac6;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
+      color: rgb(35, 34, 34);
+    }
+    .badge {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      background: #aff3ec;
+      color: #000;
+      font-size: 0.6rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Vanshika</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="journey.html" class="active">Journey</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="projects-section">
+    <h1>My Projects</h1>
+    <div class="filters">
+      <button class="filter-btn active" data-category="all"><i class="fas fa-layer-group"></i>All</button>
+      <button class="filter-btn" data-category="sql"><i class="fas fa-database"></i>SQL</button>
+      <button class="filter-btn" data-category="python"><i class="fab fa-python"></i>Python</button>
+      <button class="filter-btn" data-category="powerbi"><i class="fas fa-chart-bar"></i>Power BI</button>
+    </div>
+    <div class="project-grid">
+      <div class="project-card" data-category="python">
+        <div class="badge">Python</div>
+        <h3>AtliQ Hotel Data Analysis</h3>
+        <p>Performed data cleaning and analysis to extract actionable insights using Python libraries.</p>
+        <a href="https://github.com/vanshu03/AtliQ_Hotel_Data_Analysis" >View Project →</a>
+      </div>
+      <div class="project-card" data-category="sql">
+        <div class="badge">SQL</div>
+        <h3>Netflix Movie & TV Show Analysis</h3>
+        <p>Analyzed Netflix data using SQL queries to understand show patterns and user preferences.</p>
+        <a href="https://github.com/vanshu03/Netflix_Movie-TVshow-Analysis" >View Project →</a>
+      </div>
+      <div class="project-card" data-category="sql">
+        <div class="badge">SQL</div>
+        <h3>Public SQL Insights</h3>
+        <p>Explored structured data using SQL queries for public datasets and visual interpretations.</p>
+        <a href="https://github.com/vanshu03/Public" >View Project →</a>
+      </div>
+      <div class="project-card" data-category="python">
+        <div class="badge">Python</div>
+        <h3>Telco Churn Analysis</h3>
+        <p>Developed churn prediction model using Python with detailed EDA and visualization.</p>
+        <a href="https://github.com/vanshu03/Telco-Churn-Analysis">View Project →</a>
+      </div>
+      <div class="project-card" data-category="sql powerbi">
+        <div class="badge">SQL + Power BI</div>
+        <h3>OLA Ride Analysis</h3>
+        <p>Analyzed OLA ride trends using SQL and created insightful dashboards using Power BI.</p>
+        <a href="https://github.com/vanshu03/OLA_analysis">View Project →</a>
+      </div>
+      <div class="project-card" data-category="powerbi">
+        <div class="badge">Power BI</div>
+        <h3>Pizza Sales Dashboard</h3>
+        <p>Visualized sales performance of a pizza chain including top items, revenue, and trends.</p>
+        <a href="https://github.com/vanshu03/PizzaSales">View Project →</a>
+      </div>
+      <div class="project-card" data-category="powerbi">
+        <div class="badge">Power BI</div>
+        <h3>Amazon Global Sales Analysis</h3>
+        <p>Created an interactive dashboard to explore Amazon’s global product sales and market insights.</p>
+        <a href="https://github.com/vanshu03/Amazon-Global-Sales-Analysis">View Project →</a>
+      </div>
+      <div class="project-card" data-category="python powerbi">
+        <div class="badge">Python + Power BI</div>
+        <h3>Heart Disease Analysis</h3>
+        <p>Predicted heart disease using Python ML and displayed insights in Power BI reports.</p>
+        <a href="https://github.com/vanshu03/Heart_Disease_Analysis">View Project →</a>
+      </div>
+      <div class="project-card" data-category="powerbi">
+        <div class="badge">Power BI</div>
+        <h3>Breast Cancer Patient Analysis</h3>
+        <p>Built BI reports to analyze patient data and reveal key indicators for early cancer detection.</p>
+        <a href="https://github.com/vanshu03/Breast_cancer_patients_Analysis">View Project →</a>
+      </div>
+      <div class="project-card" data-category="python sql">
+        <div class="badge">Python + MySQL</div>
+        <h3>Expense Tracker App</h3>
+        <p>Built full-stack expense tracking app using FastAPI, MySQL, and Streamlit.</p>
+        <a href="https://github.com/vanshu03/Expense_Tracker">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelector(".filter-btn.active").classList.remove("active");
+        button.classList.add("active");
+
+        const category = button.getAttribute("data-category");
+
+        projectCards.forEach(card => {
+          const categories = card.getAttribute("data-category").split(" ");
+          if (category === "all" || categories.includes(category)) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

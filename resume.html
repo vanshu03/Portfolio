@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Vanshika</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    nav {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #03dac6;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #03dac6;
+    }
+
+    .resume-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    .resume-container h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .resume-section {
+      margin-bottom: 2rem;
+    }
+
+    .resume-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #03dac6;
+    }
+
+    .resume-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .resume-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .resume-item p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #03dac6;
+      color: #000;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #00c2b2;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Vanshika</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="resume-container">
+    <h1><i class="fas fa-file-alt"></i> My Resume</h1>
+
+    <div class="resume-section">
+      <h2><i class="fas fa-user-graduate"></i> Education</h2>
+      <div class="resume-item">
+        <h3>B.Tech in AI & Data Science (2022 – 2026)</h3>
+        <p>CGC Landran | CGPA: 8.5 (Topper)</p>
+      </div>
+      <div class="resume-item">
+        <h3>12th Grade (2022)</h3>
+        <p>Scored 96% | 1st Position (Topper)</p>
+      </div>
+      <div class="resume-item">
+        <h3>10th Grade (2020)</h3>
+        <p>Scored 98% | 1st Position (Topper)</p>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2><i class="fas fa-briefcase"></i> Experience</h2>
+      <div class="resume-item">
+        <h3>Philips – SDE Intern (June 2025 – Present)</h3>
+        <p>System-level development | C/C++, SDLC, debugging, lifecycle management</p>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2><i class="fas fa-award"></i> Achievements</h2>
+      <ul>
+        <li>Topper in School (10th & 12th) and College</li>
+        <li>3 Government Scholarships</li>
+        <li>Smart India Hackathon – Shortlisted</li>
+        <li>5⭐ SQL on HackerRank</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h2><i class="fas fa-laptop-code"></i> Skills</h2>
+      <p><strong>Languages:</strong> Python, C++, SQL, HTML, CSS, JavaScript</p>
+      <p><strong>Tools & Frameworks:</strong> Power BI, Excel, FastAPI, Streamlit</p>
+      <p><strong>Platforms:</strong> Azure Synapse, GitHub, MySQL</p>
+      <p><strong>Subjects:</strong> DBMS, DSA, OOPS, OS</p>
+    </div>
+
+    <a href="Main resume.pdf.pdf.pdf" download class="download-btn">
+      <i class="fas fa-download"></i> Download PDF
+    </a>
+  </div>
+
+</body>
+</html>

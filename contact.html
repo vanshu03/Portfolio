@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Vanshika</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    nav {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #03dac6;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #03dac6;
+    }
+
+    .contact-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    .contact-section h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .contact-container {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(3, 218, 198, 0.2);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-details div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-details div i {
+      color: #03dac6;
+      font-size: 1.3rem;
+    }
+
+    .contact-form {
+      margin-top: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #2c2c2c;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background: #03dac6;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #00b3a1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Vanshika</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-section">
+    <h1><i class="fas fa-envelope-open-text"></i> Get In Touch</h1>
+
+    <div class="contact-container">
+      <div class="contact-details">
+        <div><i class="fas fa-user"></i> Vanshika </div>
+        <div><i class="fas fa-envelope"></i> vanshika220804@email.com</div>
+        <div><i class="fas fa-phone"></i> +91 8544821962</div>
+        <div><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/vanshika008" target="_blank" style="color: #03dac6;">linkedin</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/vanshu03" target="_blank" style="color: #03dac6;">GitHub</a></div>
+      </div>
+
+      <form class="contact-form" action="mailto:vanshika220804@email.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

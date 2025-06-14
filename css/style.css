@@ -1,0 +1,187 @@
+/* css/style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #fff;
+  overflow-x: hidden;
+  background-image: radial-gradient(#ffffff66 1px, transparent 1px), radial-gradient(#ffffff33 1px, transparent 1px);
+  background-size: 3px 3px;
+  position: relative;
+}
+
+/* Shooting star animation */
+body::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(0deg, transparent, #fff);
+  animation: shooting 4s linear infinite;
+  top: -100px;
+  left: 50vw;
+  opacity: 0.8;
+  z-index: 0;
+  box-shadow: 0 0 10px 2px #fff, 0 0 20px 4px #00f2ff66;
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-600px, 600px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Smoke effect at bottom */
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 80%);
+  background-repeat: repeat-x;
+  animation: smoke-move 5s infinite linear;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes smoke-move {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 1000px bottom;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a {
+  position: relative;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #03dac6;
+  transform: translateY(-2px);
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #03dac6;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+.btn {
+  background: #03dac6;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.skills-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+}
+
+.skills-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #03dac6;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #47c2b0;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skill-category li i {
+  color: #03dac6;
+  min-width: 20px;
+}

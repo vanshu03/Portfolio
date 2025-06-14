@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Journey | Vanshika</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .journey-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+    .journey-section h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 8px;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #6df1e4, transparent 70%);
+      animation: growLine 3s ease-out forwards;
+    }
+
+    @keyframes growLine {
+      0% { height: 0; }
+      100% { height: 100%; }
+    }
+
+    .timeline-entry {
+      margin-bottom: 2.5rem;
+      position: relative;
+      padding-left: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .timeline-entry.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: #03dac6;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .timeline-entry h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #03dac6;
+    }
+
+    .timeline-entry p {
+      margin: 0;
+      color: #fff;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #03dac6;
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-top: 5px;
+    }
+
+    body {
+      background: #121212;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    nav {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #03dac6;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #03dac6;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Vanshika</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="journey.html" class="active">Journey</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="journey-section">
+    <h1><i class="fas fa-road"></i> My Journey</h1>
+
+    <div class="timeline">
+      <div class="timeline-entry">
+        <h3><i class="fas fa-school"></i> 10th Grade – 2020</h3>
+        <p>Scored 98% – 1st Position (Topper)</p>
+        <span class="badge">Academic Excellence</span>
+      </div>
+
+      <div class="timeline-entry">
+        <h3><i class="fas fa-school"></i> 12th Grade – 2022</h3>
+        <p>Scored 96% – 1st Position (Topper)</p>
+        <span class="badge">Tehsil Topper</span>
+      </div>
+
+      <div class="timeline-entry">
+        <h3><i class="fas fa-university"></i> B.Tech in AI & DS – 2022-2026</h3>
+        <p>Current CGPA: 8.5 (Topper)<br>Conceptual knowledge: OS, DBMS, DSA, OOPS</p>
+        <span class="badge">3 Govt Scholarships</span>
+      </div>
+
+      <div class="timeline-entry">
+        <h3><i class="fas fa-lightbulb"></i> Smart India Hackathon</h3>
+        <p>Participated and shortlisted in National Hackathon</p>
+        <span class="badge">Innovation</span>
+      </div>
+
+      <div class="timeline-entry">
+        <h3><i class="fas fa-user-tie"></i> Internship @ Philips (June 2025 – Present)</h3>
+        <p>Role: SDE Intern<br>Working on C/C++, SDLC, bug tracking & software lifecycle development</p>
+        <span class="badge">Current Internship</span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const entries = document.querySelectorAll('.timeline-entry');
+
+    const observer = new IntersectionObserver((entriesObs) => {
+      entriesObs.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    entries.forEach(entry => observer.observe(entry));
+  </script>
+
+</body>
+</html>
